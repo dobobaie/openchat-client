@@ -10,14 +10,7 @@ const router = new VueRouter({
     {
       name: 'HOME',
       path: '/',
-      component: Home,
-      beforeEnter(to, from, next) {
-        next(
-          router.app.$sAuth.isConnected()
-            ? '/dashboard'
-            : undefined
-        );
-      }
+      component: Home
     },
     {
       path: '*',
