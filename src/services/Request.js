@@ -15,7 +15,7 @@ export default class Request {
 
   get(route, headers) {
     return this.Vue.$sEvent.load(
-      this.Vue.$http
+      this.Vue.$fireflyio
         .get(route, Object.assign(this.getHeaders(), headers || {}))
         .then(res => res.data)
         .catch(err => {
@@ -29,7 +29,7 @@ export default class Request {
 
   put(route, payload, headers) {
     return this.Vue.$sEvent.load(
-      this.Vue.$http
+      this.Vue.$fireflyio
         .put(route, payload, Object.assign(this.getHeaders(), headers || {}))
         .then(res => res.data)
         .catch(err => {
@@ -43,7 +43,7 @@ export default class Request {
 
   post(route, payload, headers) {
     return this.Vue.$sEvent.load(
-      this.Vue.$http
+      this.Vue.$fireflyio
         .post(route, payload, Object.assign(this.getHeaders(), headers || {}))
         .then(res => res.data)
         .catch(err => {
@@ -57,7 +57,7 @@ export default class Request {
 
   delete(route, headers) {
     return this.Vue.$sEvent.load(
-      this.Vue.$http
+      this.Vue.$fireflyio
         .delete(route, Object.assign(this.getHeaders(), headers || {}))
         .then(res => res.data)
         .catch(err => {
