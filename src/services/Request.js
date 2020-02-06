@@ -6,9 +6,7 @@ export default class Request {
   getHeaders() {
     return this.Vue.$sAuth.retrieveToken()
       ? {
-          headers: {
-            Authorization: `Bearer ${this.Vue.$sAuth.retrieveToken()}`
-          }
+          Authorization: `Bearer ${this.Vue.$sAuth.retrieveToken()}`
         }
       : {};
   }
