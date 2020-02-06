@@ -48,7 +48,9 @@
         );
         this.error = error && error.code;
         if (!this.error) {
-          this.events._closeModal();
+          this.events.loggedin
+            ? this.events.loggedin()
+            : this.events._closeModal();
         }
       }
     }
