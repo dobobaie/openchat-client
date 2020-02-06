@@ -15,5 +15,6 @@ export default {
   validation_error_email_must_be_a_valid_email: "EMAIL_MUST_BE_A_VALID_EMAIL",
 
   user_email_already_exists: "USER_EMAIL_ALREADY_EXISTS",
-  user_does_not_exist: 'USER_DOES_NOT_EXIST'
+  user_does_not_exist: 'USER_DOES_NOT_EXIST',
+  user_nickname_already_exists: 'USER_NICKNAME_ALREADY_EXISTS'
 }
