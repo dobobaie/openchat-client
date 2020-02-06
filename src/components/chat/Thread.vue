@@ -12,7 +12,7 @@
               <v-list-item-action-text v-text="formatDate(item.date)"></v-list-item-action-text>
             </v-list-item-action>
           </v-list-item>
-          <v-divider v-if="index + 1 < items.length" :key="index"></v-divider>
+          <v-divider v-if="index + 1 < items.length" :key="'divider_' + index"></v-divider>
         </template>
       </v-list-item-group>
     </v-list>
