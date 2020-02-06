@@ -66,6 +66,7 @@
   /deep/ div.v-card div.submit button {
     margin-top: 20px;
     background-color: #e36262 !important;
-    padding: 25px 35px;
+    padding: 15px 35px;
+    height: auto;
   }
 </style>
