@@ -2,6 +2,8 @@
 
 Openchat client is the official UI of the Openchat project.
 
+[Live demo](http://164.132.106.118:4650/)  
+
 ## Requirements
 
 ### Environment variables
