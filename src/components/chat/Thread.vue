@@ -4,7 +4,7 @@
       <v-list-item-group multiple>
         <template v-for="(item, index) in items">
           <v-list-item :key="index">
-            <v-list-item-content>
+            <v-list-item-content v-bind:class="{ owner: item.from === $sAuth.retrieveNickname() }">
               <v-list-item-subtitle class="text--primary" v-text="item.from"></v-list-item-subtitle>
               <v-list-item-subtitle v-text="item.message"></v-list-item-subtitle>
             </v-list-item-content>
@@ -66,3 +66,9 @@
     }
   };
 </script>
+
+<style scoped>
+  div.owner {
+    text-align: right;
+  }
+</style>
