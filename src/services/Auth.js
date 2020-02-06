@@ -36,8 +36,8 @@ export default class Auth {
     return this.public_token_payload && this.public_token_payload.is_admin;
   }
 
-  retrieveName() {
-    return this.public_token_payload && this.public_token_payload.first_name;
+  retrieveNickname() {
+    return this.public_token_payload && this.public_token_payload.nickname;
   }
 
   retrieveUserId() {
