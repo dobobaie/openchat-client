@@ -11,7 +11,9 @@ export default class Account {
   login(data) {
     return this.Vue.$sRequest
       .post(`/users/login`, data)
-      .then(response => this.Vue.$sAuth.setToken(response.access_token));
+      .then(response => this.Vue.$fireflyio.authenticate(response.access_token))
+      .then(response => response.data.authorization.split(' ').pop())
+      .then(access_token => this.Vue.$sAuth.setToken(access_token));
   }
 
   logout() {

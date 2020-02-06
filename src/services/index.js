@@ -6,6 +6,7 @@ import EventService from './Event';
 import AuthService from './Auth';
 import RequestService from './Request';
 import ModalService from './Modal';
+import SocketService from './Socket';
 
 export default {
   install(Vue, { Router }) {
@@ -17,5 +18,6 @@ export default {
     Vue.prototype.$sRequest = new RequestService(Vue.prototype);
     Vue.prototype.$sModal = new ModalService(Vue.prototype);
     Vue.prototype.$sRouter = new RouterService(Vue.prototype, Router);
+    Vue.prototype.$sSocket = new SocketService(Vue.prototype, Router);
   }
 };

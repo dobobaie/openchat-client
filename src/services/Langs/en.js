@@ -11,5 +11,8 @@ export default {
 
   SUCCESSFULL_REGISTERED: 'You are successfully registered ! Now you can log in or verify your account (it depends if the developer has the time to develop the verify feature).',
 
+  CHATBOX: 'Chatbox',
+  CHATBOX_NO_MESSAGES: 'No messages yet ? Be the first to start the chat !',
+  TAPE_MESSAGE: 'Tape your message...',
   LOGOUT: 'Log out'
 };
