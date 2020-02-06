@@ -1,23 +1,24 @@
 <template>
   <v-content class="home">
     <v-container v-if="is_connected">
+      <UserActionsTop></UserActionsTop>
       <ChatCard></ChatCard>
-      <div class="user-actions">
-        <v-btn class="logout-btn" block @click="() => $sModels.account.logout()">
-          <v-icon>mdi-logout</v-icon> <span v-if="$vuetify.breakpoint.smAndUp">{{ $_('LOGOUT') }}</span>
-        </v-btn>
-      </div>
+      <UserActionsBottom></UserActionsBottom>
     </v-container>
   </v-content>
 </template>
 
 <script>
   import AccountRegister from '@/components/account/Register';
+  import UserActionsTop from '@/components/user/ActionsTop';
+  import UserActionsBottom from '@/components/user/ActionsBottom';
   import ChatCard from "@/components/chat/Card";
 
   export default {
     name: 'Home',
     components: {
+      UserActionsTop,
+      UserActionsBottom,
       ChatCard
     },
     data: () => ({
@@ -43,13 +44,5 @@
 <style scoped>
   /deep/ div.container {
     max-width: 500px;
-  }
-  div.user-actions {
-    margin: 25px auto;
-  }
-  button.logout-btn {
-    background-color: #e36262 !important;
-    padding: 25px 35px;
-    color: #FFF;
   }
 </style>
